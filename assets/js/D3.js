@@ -123,9 +123,9 @@ console.log(charactersNames);
 */
 const female = [];
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  const genderFemale = starWarsCharacters[i].gender;
-  if (genderFemale === "female") {
-    female.push(genderFemale);
+  const person = starWarsCharacters[i];
+  if (person.gender === "female") {
+    female.push(person);
   }
 }
 console.log(female);
@@ -165,7 +165,26 @@ switch (eye_color) {
   }
 console.log (eye_color)
 */
-
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  const person = starWarsCharacters[i];
+  switch (person.eye_color) {
+    case "blue":
+      eye_color.blue.push(person);
+      break;
+    case "yellow":
+      eye_color.yellow.push(person);
+      break;
+    case "brown":
+      eye_color.brown.push(person);
+      break;
+    case "red":
+      eye_color.red.push(person);
+      break;
+    case "blue-grey":
+      eye_color["blue-grey"].push(person);
+      break;
+  }
+}
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
@@ -181,6 +200,13 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 }
 console.log("somma eseguita");
  */
+let crewMass = 0;
+let i = 0;
+while (i < starWarsCharacters.length) {
+  const person = starWarsCharacters[i];
+  crewMass += person.mass;
+  i++;
+}
 /* ESERCIZIO 7
   Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'ipotetica astronave contenente i personaggi dell'array "starWarsCharacters".
 
