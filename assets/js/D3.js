@@ -139,7 +139,7 @@ const eye_color = {
   yellow: [],
   brown: [],
   red: [],
-  "blue-gray": [],
+  blue-gray: [],
 };
 console.log(eye_color);
 
@@ -200,7 +200,7 @@ const selectedCharacters = [];
 for (let i = 0; i < starWarsCharacters.length; i++) {
   const selectedCharacters = starWarsCharacters[i];
   if ((starWarsCharacters.gender = "n/a")) {
-    starWarsCharacters.gender.splice("robot");
+    selectedCharacters.gender.splice("robot");
   }
 }
 console.log[starWarsCharacters];
