@@ -139,7 +139,7 @@ const eye_color = {
   yellow: [],
   brown: [],
   red: [],
-  blue-gray: [],
+  "blue-gray": [],
 };
 console.log(eye_color);
 
