@@ -124,52 +124,61 @@ console.log(charactersNames);
 const female = [];
 for (let i = 0; i < starWarsCharacters.length; i++) {
   const genderFemale = starWarsCharacters[i].gender;
-  console.log(genderFemale);
   if (genderFemale === "female") {
     female.push(genderFemale);
   }
-  console.log(female);
 }
+console.log(female);
 
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia le seguenti proprietà: blue, yellow, brown, red, blue-gray.
   Ad ognuna di queste proprietà assegna come valore un array vuoto.
 */
 const eye_color = {
-  "blue": [],
-  "yellow": [],
-  "brown": [],
-  "red": [],
-  "blue_gray": [],
+  blue: [],
+  yellow: [],
+  brown: [],
+  red: [],
+  "blue-gray": [],
 };
 console.log(eye_color);
 
 /* ESERCIZIO 5
   Utilizza uno switch statement per inserire uno ad uno gli oggetti dei personaggi di "starWarsCharacters" negli array relativi al colore degli occhi precedentemente creati.
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
-*/
+
 switch (eye_color) {
-  case <"blue">:
+  case <eye_color ==="blue">:
    "blue":[starWarsCharacters]
   break;
-  case <"yellow">:
+  case <eye_color==="yellow">:
     "yellow":[starWarsCharacters]
   break;
-  case <"brown">:
+  case <eye_color==="brown">:
    "brown": [starWarsCharacters]
   break;
-  case <"red">: 
+  case <eye_color==="red">: 
    "red":[starWarsCharacters]
   break;
   default:
-   "blue_gray": [starWarsCharacters]
+   "blue-gray": [starWarsCharacters]
   }
 console.log (eye_color)
-
+*/
 
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
+const crewMass = [];
+let numPersonaggi = 10;
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  const weight = starWarsCharacters[i].mass;
+
+  do {
+    crewMass.push(weight);
+  } while ((i = starWarsCharacters.length));
+}
+console.log("somma eseguita");
 
 /* ESERCIZIO 7
   Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'ipotetica astronave contenente i personaggi dell'array "starWarsCharacters".
